@@ -148,7 +148,7 @@
     });
     addDesc(h, [
         makeSpan($("title").text() + " " + makeSpan("Ver.2.0.0", "gray", "skyblue; font-size: 12px; padding: 2.5px"), "darkgray", "purple; font-size: 16px; padding: 2.5px"),
-        "最終更新: 2021/01/24",
+        "最終更新: 2021/08/04",
         "",
         "Tokenを使って、Discordのいろんなことができます。",
         'Tokenの取得の方法は、<a href="https://alphanull.work/get-token" target="_blank">こちら</a>を参照してください。',
