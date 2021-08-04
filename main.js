@@ -150,9 +150,9 @@
         makeSpan($("title").text() + " " + makeSpan("Ver.2.1.1", "gray", "skyblue; font-size: 12px; padding: 2.5px"), "darkgray", "purple; font-size: 16px; padding: 2.5px"),
         "最終更新: 2021/01/24",
         "",
-        "Tokenを使って、Discordの荒らしができます。",
-        'Tokenの取得の方法は、<a href="https://shunshun94.github.io/shared/sample/discordAccountToken" target="_blank">こちら</a>を参照してください。',
-        'また、ご不明な点や改善してほしい点がございましたらDiscordサーバーの<a href="https://discord.com/invite/sE3Wkdq" target="_blank">荒らし連合</a>か、同サーバー内にいる' + makeSpan("夕立改二#2068", "lightyellow", "orange") + 'までお気軽にご連絡ください。',
+        "Tokenを使って、Discordのいろんなことができます。",
+        'Tokenの取得の方法は、<a href="https://alphanull.work/get-token" target="_blank">こちら</a>を参照してください。',
+        'バグ等がありましたら、' + makeSpan("Alpha Null#5000", "lightyellow", "orange") + 'までお気軽にご連絡ください。',
         "",
         makeSpan("必読", "white", "red"),
         "以下の事項を守らないとTokenが電話認証要求などによって使用できなくなる可能性があります。",
@@ -259,7 +259,7 @@
             });
         });
     //--------------------------------------------------
-    addDesc(area["レイド"], [
+    addDesc(area["参加"], [
         "招待リンクIDには" + makeSpan("「https://discord.com/invite/XXXXXXX」", "white") + "、または" + makeSpan("「https://discord.gg/XXXXXXX」", "white") + "形式の招待リンクか、招待リンクのIDを入力してください。",
         "サーバーIDには" + makeSpan("「https://discord.com/channels/XXXXXXXXXXXXXXXXXX/XXXXXXXXXXXXXXXXXX」", "white") + "形式のチャンネルURLか、サーバーのIDを入力してください。"
     ]).after("<br><br>");
@@ -267,7 +267,7 @@
         var m = inputInvite.val().match(/^https?:\/\/discord\.(?:com\/invite|gg)\/([0-9a-zA-Z]+)$/) || inputInvite.val().match(/^([0-9a-zA-Z]+)$/);
         inputInvite.val(m ? m[1] : "");
     });
-    addBtn(area["レイド"], "招待を受ける", function() {
+    addBtn(area["参加"], "招待を受ける", function() {
         if (inputInvite.val().length === 0) return outputLog(g_output, "WARNING: 招待リンクIDが入力されていません", g_ip_flag);
         splitLine(inputToken.val()).forEach(function(v, i) {
             g_ajaxTimeoutIds.push(setTimeout(function() {
@@ -290,11 +290,11 @@
             }, makeDelay(inputInterval.val(), i)));
         });
     }).after("<br><br>");
-    var inputGuildId = addInput(area["レイド"], "サーバーID", "XXXXXXXXXXXXXXXXXX").change("change", function() {
+    var inputGuildId = addInput(area["参加"], "サーバーID", "XXXXXXXXXXXXXXXXXX").change("change", function() {
         var m = inputGuildId.val().match(/^https?:\/\/discord\.com\/channels\/([0-9]+)\/[0-9]+\/?$/) || inputGuildId.val().match(/^([0-9]+)$/);
         inputGuildId.val(m ? m[1] : "");
     });
-    addBtn(area["レイド"], "サーバーから脱退", function() {
+    addBtn(area["参加"], "サーバーから脱退", function() {
         if (inputGuildId.val().length === 0) return outputLog(g_output, "WARNING: サーバーIDが入力されていません", g_ip_flag);
         splitLine(inputToken.val()).forEach(function(v, i) {
             g_ajaxTimeoutIds.push(setTimeout(function() {
