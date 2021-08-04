@@ -140,14 +140,14 @@
         g_ajaxTimeoutIds = [], // 通信を行う遅延された関数のsetTimeoutのidを格納する配列
         h = $("<div>").appendTo("body").append($("<h1>").text($("title").text())),
         area = {};
-    ["基本設定", "生存確認", "レイド", "認証", "発言", "ダイレクトメッセージ", "フレンドリクエスト", "アバター"].forEach(function(k) {
+    ["基本設定", "生存確認", "参加", "認証", "発言", "ダイレクトメッセージ", "フレンドリクエスト", "アバター"].forEach(function(k) {
         area[k] = $("<div>").css({
             backgroundColor: "white",
             padding: "10px"
         });
     });
     addDesc(h, [
-        makeSpan($("title").text() + " " + makeSpan("Ver.2.1.1", "gray", "skyblue; font-size: 12px; padding: 2.5px"), "darkgray", "purple; font-size: 16px; padding: 2.5px"),
+        makeSpan($("title").text() + " " + makeSpan("Ver.2.0.0", "gray", "skyblue; font-size: 12px; padding: 2.5px"), "darkgray", "purple; font-size: 16px; padding: 2.5px"),
         "最終更新: 2021/01/24",
         "",
         "Tokenを使って、Discordのいろんなことができます。",
