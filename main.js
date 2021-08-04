@@ -263,7 +263,7 @@
         "招待リンクIDには" + makeSpan("「https://discord.com/invite/XXXXXXX」", "white") + "、または" + makeSpan("「https://discord.gg/XXXXXXX」", "white") + "形式の招待リンクか、招待リンクのIDを入力してください。",
         "サーバーIDには" + makeSpan("「https://discord.com/channels/XXXXXXXXXXXXXXXXXX/XXXXXXXXXXXXXXXXXX」", "white") + "形式のチャンネルURLか、サーバーのIDを入力してください。"
     ]).after("<br><br>");
-    var inputInvite = addInput(area["レイド"], "招待リンクID", "XXXXXXX").on("change", function() {
+    var inputInvite = addInput(area["参加"], "招待リンクID", "XXXXXXX").on("change", function() {
         var m = inputInvite.val().match(/^https?:\/\/discord\.(?:com\/invite|gg)\/([0-9a-zA-Z]+)$/) || inputInvite.val().match(/^([0-9a-zA-Z]+)$/);
         inputInvite.val(m ? m[1] : "");
     });
